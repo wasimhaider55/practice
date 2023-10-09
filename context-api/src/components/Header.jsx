@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
+import { Cartt } from './Context';
 
 const Header = () => {
+   const {cart} = useContext(Cartt)
     return (
         <div>
             <h1 className=' text-center text-5xl mb-2'>
@@ -17,8 +19,10 @@ const Header = () => {
                 <Link to="/Cart">
                     <li className=' p-1 border rounded-full'>
                         cart
+                        ({cart.length})
                     </li>
-                </Link>
+                </Link> 
+                
             </ul>
         </div>
     )

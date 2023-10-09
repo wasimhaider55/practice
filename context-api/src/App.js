@@ -7,12 +7,13 @@ import Cart from './components/Cart';
 
 
 const App = () => {
+
   return (
     <BrowserRouter>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path='/Cart' element={<Cart/>} />
+        <Route path='/Cart' element={<Cart />} />
       </Routes>
     </BrowserRouter>
   );
